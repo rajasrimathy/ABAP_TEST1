@@ -1,0 +1,57 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: {
+        typeName: 'Product',
+        typeNamePlural: 'Products',
+        title: {
+            type: #STANDARD,
+            label: 'Product',
+            value: 'ZMainproductid'
+        }
+    }
+}
+annotate view ZC_INS_CHAR with
+{
+  @UI.facet:
+  [
+      {
+          id:'Product',
+          purpose:#STANDARD,
+          type: #IDENTIFICATION_REFERENCE,
+          label: 'Product',
+          position: 10
+      },
+       {
+          id:'Components',
+          purpose:#STANDARD,
+          type: #LINEITEM_REFERENCE,
+          label: 'Components',
+          position: 20,
+          targetElement: '_Root'
+      }
+   ]
+  @UI.hidden: true
+  ZProductUuid;
+
+  @UI: {
+    lineItem: [ { position: 10 } ],
+    identification: [ { position: 10 } ],
+    selectionField: [ { position: 10 } ]
+  }
+  ZMainproductid;
+
+  @UI: {
+    lineItem: [ { position: 20 } ],
+    identification: [ { position: 20 } ],
+    selectionField: [ { position: 20 } ]
+  }
+  ZMainproductprice;
+
+  @UI: {
+    lineItem: [ { position: 30 } ],
+    identification: [ { position: 30 } ],
+    selectionField: [ { position: 30 } ]
+  }
+  ZMainproductpricecur;
+
+}

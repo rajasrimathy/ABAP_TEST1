@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENHO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOOL>BADI_IMPL</TOOL>
+   <SHORTTEXT>Origin of Inspection Specifications</SHORTTEXT>
+   <SPOT_NAME>QC_CERT_FUNC_MODULE</SPOT_NAME>
+   <IMPL>
+    <ENH_BADI_IMPL_DATA>
+     <SPOT_NAME>QC_CERT_FUNC_MODULE</SPOT_NAME>
+     <BADI_NAME>BADI_QC_CERT_SPEC_ORIGIN</BADI_NAME>
+     <IMPL_NAME>Z_ORIGIN_INSP</IMPL_NAME>
+     <IMPL_CLASS>ZORIGININSPECTION</IMPL_CLASS>
+     <ACTIVE>X</ACTIVE>
+     <LOCKED_IN_CUSTOMIZING>X</LOCKED_IN_CUSTOMIZING>
+    </ENH_BADI_IMPL_DATA>
+   </IMPL>
+  </asx:values>
+ </asx:abap>
+</abapGit>
