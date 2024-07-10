@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Debit Note',
+    typeNamePlural: 'Debit Notes'
+  }
+}annotate view ZC_DEBITNOTE_VIEW
+    with 
+{
+    @UI.facet: [ 
+    { 
+        id:'DebitNote', 
+        purpose:#STANDARD, 
+        type: #IDENTIFICATION_REFERENCE, 
+        label: 'Debit Note', 
+        position: 10 
+    }
+  ] 
+     @UI.hidden: true ZLastChangedAt; 
+     
+    @UI: { 
+    lineItem: [ { position: 10,label: 'Debit Note ID' } ], 
+            identification: [ { position: 10 } ], 
+            selectionField: [ { position: 10 } ] } 
+     ZDebitNoteID;
+     
+     
+     @UI: { 
+    lineItem: [ { position: 20 , label: 'Debit Note request Type' }], 
+            identification: [ { position: 20 } ], 
+            selectionField: [ { position: 20 } ] } 
+     ZDebitmemoreqtype;
+     
+     
+     @UI: { 
+     lineItem: [ { position: 90, importance: #HIGH } ,
+                 { type: #FOR_ACTION, dataAction: 'get_access_token', label: 'Get Access Token' } ,
+                 { type: #FOR_ACTION, dataAction: 'upload_data', label: 'Upload Data' } 
+     ], 
+     
+     identification: [ { position: 90 } ,
+                     { type: #FOR_ACTION, dataAction: 'get_access_token', label: 'Get Access Token' },
+                     { type: #FOR_ACTION, dataAction: 'upload_data', label: 'Upload Data' } 
+                  ], 
+     
+     textArrangement: #TEXT_ONLY 
+     }
+     
+     @UI.hidden: true ZCreatedAt; 
+    
+}

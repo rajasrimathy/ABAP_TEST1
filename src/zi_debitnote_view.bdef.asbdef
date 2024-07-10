@@ -1,0 +1,39 @@
+managed implementation in class zbp_i_debitnote_view unique;
+strict ( 2 );
+
+define behavior for ZI_DEBITNOTE_VIEW //alias <alias_name>
+persistent table zdebitnote_root
+lock master
+authorization master ( instance )
+etag master ZLastChangedAt
+{
+
+field ( readonly )
+  ZDebitNoteUuid,
+    ZCreatedAt,
+    ZCreatedBy,
+    ZLocalLastChangedAt,
+    ZLastChangedAt,
+    ZLastChangedBy;
+
+field ( numbering : managed ) ZDebitNoteUuid;
+  create;
+  update;
+  delete;
+
+  action get_access_token;
+action upload_data;
+
+
+mapping for zdebitnote_root
+{
+    ZDebitNoteUuid = z_debitnoteuuid;
+    ZDebitNoteID = z_debitnoteid;
+    ZDebitmemoreqtype = z_debitmemoreqtype;
+    ZCreatedBy = z_created_by;
+    ZCreatedAt = z_created_at;
+    ZLastChangedBy = z_last_changed_by;
+    ZLastChangedAt = z_last_changed_at;
+    ZLocalLastChangedAt = z_local_last_changed_at;
+}
+}
