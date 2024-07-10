@@ -1,23 +1,13 @@
-CLASS zorigininspection DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZORIGININSPECTION definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-
-    INTERFACES if_badi_interface .
-    INTERFACES if_ex_qc_cert_spec_origin .
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
-CLASS zorigininspection IMPLEMENTATION.
-
-
-  METHOD if_ex_qc_cert_spec_origin~execute.
-  DATA(typ) = '12'.
-
-  ENDMETHOD.
+CLASS ZORIGININSPECTION IMPLEMENTATION.
 ENDCLASS.

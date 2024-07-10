@@ -1,4 +1,10 @@
-CLASS zbp_c_quality_inspection_root DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zc_quality_inspection_root.
+class ZBP_C_QUALITY_INSPECTION_ROOT definition
+  public
+  create private .
+
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 

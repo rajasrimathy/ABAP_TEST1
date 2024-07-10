@@ -1,22 +1,13 @@
-CLASS ztest_class DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZTEST_CLASS definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-
-    INTERFACES if_oo_adt_classrun .
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
 CLASS ZTEST_CLASS IMPLEMENTATION.
-
-
-  METHOD if_oo_adt_classrun~main.
-
-
-  ENDMETHOD.
 ENDCLASS.

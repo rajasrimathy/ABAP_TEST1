@@ -1,12 +1,10 @@
+class ZBP_I_QUALITY_INSPECTION_ROOT definition
+  public
+  create private .
 
-
-
-CLASS zbp_i_quality_inspection_root DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_quality_inspection_root.
-
-CLASS-DATA: total_price_up TYPE p DECIMALS 2 VALUE 0.
-
-
-
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
