@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for flight'
+define service Zsd_flightservicedefinition {
+  expose ZDEMO_FLIGHTCONN;
+}

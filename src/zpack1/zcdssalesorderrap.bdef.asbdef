@@ -1,0 +1,13 @@
+managed implementation in class zbp_cdssalesorderrap unique;
+strict ( 2 );
+
+define behavior for zcdssalesorderrap //alias <alias_name>
+persistent table zsalesorderrap
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+}

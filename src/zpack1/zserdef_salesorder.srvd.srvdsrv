@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Def - Sales order'
+define service ZSerdef_salesorder {
+  expose zcdssalesorderrap as SalesOrderset;
+}

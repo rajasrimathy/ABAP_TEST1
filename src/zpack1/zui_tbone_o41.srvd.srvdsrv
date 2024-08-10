@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for ZC_TBONE000'
+define service ZUI_TBONE_O41 {
+  expose ZC_TBONE000 as RAP1;
+}

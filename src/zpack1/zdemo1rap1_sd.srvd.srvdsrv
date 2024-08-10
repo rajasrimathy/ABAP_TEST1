@@ -1,0 +1,4 @@
+@EndUserText.label: 'My first demo on service definition'
+define service Zdemo1rap1_sd {
+  expose zdemo1rap1;
+}

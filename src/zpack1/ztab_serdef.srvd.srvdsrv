@@ -1,0 +1,4 @@
+@EndUserText.label: 'Tab service definition'
+define service Ztab_serdef {
+  expose ztab_cds;
+}

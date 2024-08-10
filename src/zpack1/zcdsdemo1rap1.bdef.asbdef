@@ -1,0 +1,44 @@
+managed implementation in class ZBP_R_TBONE1 unique;
+strict ( 2 );
+with draft;
+define behavior for ZCDSDEMO1RAP1 alias RAP1
+persistent table ztbone
+draft table ZTBONE000_D1
+etag master LastChangedAt
+lock master total etag LocalLastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   PoID;
+
+  field ( readonly )
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   PoID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTBONE
+  {
+    PoID = po_id;
+    VendorName = vendor_name;
+    PurchaseOrg = purchase_org;
+    CurCode = cur_code;
+    CreatedBy = created_by;
+    CreatedOn = created_on;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}
